@@ -108,8 +108,9 @@ int main() {
     scan_range( 0, 1 );
     scan_range( 0xe8000001, 0xe8001000 );
     scan_rangex( 0xe8008001, 0xe8009000 );
+    fseek( outfh, -2, SEEK_CUR );
     fprintf(outfh,
-        "{\"end\",\"end\",0xffff}\n};\n"
+        "\n};\n"
         "mobdev_err *mobdev_geterr(uint32_t num) {\n"
         "  int errCount = sizeof( mobdev_errs ) / sizeof( mobdev_err );\n"
         "  for( int i=0;i<errCount;i++ ) if( mobdev_errs[i].num == num ) return &mobdev_errs[i];\n"

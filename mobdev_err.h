@@ -309,8 +309,7 @@ static mobdev_err mobdev_errs[] = {
 { "?", "The provisioning profile requires online authorization.", 0xe8008026 },
 { "?", "The cdhash is not in the trust cache.", 0xe8008027 },
 { "?", "Invalid arguments or option combination.", 0xe8008028 },
-{ "?", "The code signature version is no longer supported.", 0xe8008029 },
-{"end","end",0xffff}
+{ "?", "The code signature version is no longer supported.", 0xe8008029 }
 };
 mobdev_err *mobdev_geterr(uint32_t num) {
   int errCount = sizeof( mobdev_errs ) / sizeof( mobdev_err );
